@@ -1,13 +1,57 @@
-💰 BudgetBuddy – Finance ManagerBudgetBuddy is a full-stack MERN application that empowers users to manage their financial health through intuitive tracking, smart budgeting, and data-driven insights.🚀 Core FeaturesFeatureDescriptionTransaction CRUDComplete management of income and expense entries.Smart BudgetingSet monthly limits per category with visual breach alerts.Visual AnalyticsDynamic spending charts and graphs using Chart.js/Recharts.AutomationHandle recurring transactions (subscriptions, bills) automatically.Data PortabilityExport financial history and reports to CSV or PDF.CategorizationOrganize spending (Food, Rent, etc.) for granular tracking.🛠️ Technical StackFrontendReact.js (UI) & Tailwind CSS (Styling)Redux Toolkit (State Management)Axios (API Requests)BackendNode.js & Express.js (Server)MongoDB & Mongoose (Database & Modeling)JWT & Bcrypt (Secure Authentication)🏗️ Project StructurePlaintextBudgetBuddy/
-├── client/           # React Frontend
-├── server/           # Node.js Backend
-│   ├── models/       # Mongoose Schemas (User, Transaction, Budget)
-│   ├── routes/       # API Endpoints
-│   └── middleware/   # Auth & Error Handling
-└── README.md
-⚙️ Quick SetupClone & InstallBashgit clone https://github.com/your-username/budgetbuddy.git
-npm install && cd client && npm install
-Environment Variables (server/.env)Code snippetPORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
-ExecutionBackend: npm run dev (from /server)Frontend: npm start (from /client)📈 RoadmapPlaid Integration: Sync real-time bank transactions.AI Financial Advisor: Predictive spending alerts using ML.Multi-Currency: Support for global currency conversion. expenses.
+
+<img src="https://cdn-icons-png.flaticon.com/512/2845/2845705.png" width="35"> BudgetBuddy – Finance Manager
+<p align="left">
+<img src="https://img.shields.io/badge/MERN-Stack-green.svg" />
+<img src="https://img.shields.io/badge/Maintained%3F-yes-blue.svg" />
+<img src="https://img.shields.io/badge/License-MIT-important.svg" />
+</p>
+
+BudgetBuddy is a high-performance financial management tool built on the MERN stack. It allows users to track income/expenses, visualize spending patterns via dynamic charts, and receive automated budget alerts.
+
+🚀 Key Features
+💳 Transaction Management – Full CRUD for tracking income and expenses.
+
+📊 Dynamic Visualizations – Real-time spending charts and monthly breakdowns.
+
+⚠️ Smart Budgeting – Set category-wise limits with automated breach alerts.
+
+🔄 Recurring Logs – Automate recurring transactions (subscriptions/bills).
+
+📄 Data Export – Download financial reports in CSV and PDF formats.
+
+📱 Responsive UI – Seamless experience across mobile, tablet, and desktop.
+
+🛠️ Tech Stack
+Frontend	Backend	Database
+React.js (Hooks)	Node.js	MongoDB
+Redux Toolkit	Express.js	Mongoose
+Tailwind CSS	JWT / Bcrypt	Atlas / Compass
+Chart.js	Axios	Cloudinary (if used)
+🏗️ Folder Architecture
+Plaintext
+📁 budgetbuddy-root
+ ├── 📂 client          # React source code, components, hooks
+ ├── 📂 server          # Node.js server, routes, controllers
+ │    ├── 📂 models     # Mongoose Schemas (User, Transaction)
+ │    ├── 📂 middleware # JWT Auth, Error Handlers
+ │    └── 📂 config     # DB connection
+ └── 📄 .env.example    # Environment variables template
+⚙️ Quick Start
+1. Server Setup
+Bash
+cd server
+npm install
+npm start
+2. Client Setup
+Bash
+cd client
+npm install
+npm run dev
+Note: Ensure your .env file in the server directory contains MONGO_URI and JWT_SECRET for the application to authenticate successfully.
+
+📈 Future Roadmap
+[ ] Plaid API integration for live bank syncing.
+
+[ ] AI Insights to suggest budget optimizations.
+
+[ ] Dark Mode toggle for enhanced accessibility.
