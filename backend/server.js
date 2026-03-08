@@ -5,6 +5,8 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const reportRoutes = require("./routes/reportRoutes");
 const aiRoutes = require("./routes/aiRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
+
 
 
 const app = express();
@@ -22,9 +24,10 @@ app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/reports", reportRoutes);
 
 app.use("/api/ai", aiRoutes);
+app.use("/api/payment", paymentRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Grocery Inventory Backend Running 🚀");
+  res.send("Grocery Inventory Backend Running");
 });
 
 const PORT = process.env.PORT || 5000;
